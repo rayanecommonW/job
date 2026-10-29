@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+repo_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+export PATH="$repo_dir/.toolchains/TinyTeX/bin/universal-darwin:$repo_dir/.venv/bin:$PATH"
+
+if [ ! -f "$repo_dir/cv-workspace/.vita/config.json" ]; then
+  echo 'VITA workspace is missing. See job-search/README.md.' >&2
+  exit 1
+fi
+
+# The root profile is authoritative. Refresh VITA's background before each run.
+cp "$repo_dir/profile.yaml" "$repo_dir/cv-workspace/.vita/cv.yaml"
+cd "$repo_dir/cv-workspace"
+exec "$repo_dir/.venv/bin/vita" "$@"

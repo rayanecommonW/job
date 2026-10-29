@@ -1,0 +1,54 @@
+# Allowlist: ignore everything at the top level, then re-include shared files.
+# Personal data (profile.yaml, AGENTS.local.md, START-HERE.md, job-search/,
+# networking/, CVs, cv-workspace/, browser profiles) stays ignored.
+/*
+!/.gitignore
+!/AGENTS.md
+!/INITIALIZE.md
+!/README.md
+!/scripts/
+
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+
+# Scripts with hardcoded personal details. Keep them local.
+/scripts/append-career-application-note.py
+/scripts/build-cv
+/scripts/career-browser-workflow-helper.js
+/scripts/career-native-tool-helpers-2026-10-15.json
+/scripts/career-smartrecruiters-reuse-helper.js
+/scripts/career-usg-reviewed-form-helper.js
+/scripts/export-note-cover-letter.py
+/scripts/international-ats-helpers.json
+/scripts/international-browser-helpers.json
+/scripts/international-greenhouse-helpers.json
+/scripts/jobboards-ashby-volume-helpers.json
+/scripts/jobboards-browser-helpers.json
+/scripts/jobboards-builtin-helpers.json
+/scripts/jobboards-gh-core-volume-helpers.json
+/scripts/jobboards-gh-current-helpers.json
+/scripts/jobboards-smartrecruiters-helpers.json
+/scripts/jobboards-wellfound-helpers.json
+/scripts/mark-career-cv-reviewed.py
+/scripts/native-campaign-helpers-2026-10-11.json
+/scripts/native-smartrecruiters-2026-10-12.json
+/scripts/parallel-career-claims.py
+/scripts/prepare-batch-application.py
+/scripts/prepare-career-application-note.py
+/scripts/prepare-vita-application.py
+/scripts/prepare-wttj-application.py
+/scripts/rebuild-reviewed-cv.py
+/scripts/reuse-reviewed-cv.py
+/scripts/save-answers.py
+/scripts/submit-public-ashby.py
+/scripts/submit-public-dover.py
+/scripts/submit-reviewed-public-ashby.py
+/scripts/wttj-ats-helpers.json
+/scripts/wttj-browser-helpers.json
+/scripts/wttj-greenhouse-helpers.json
+/scripts/wttj-smartrecruiters-helpers.json
+/scripts/wttj-teamtailor-helpers.json
+/scripts/wttj-transfer-helpers.json

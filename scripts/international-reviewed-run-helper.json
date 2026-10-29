@@ -1,0 +1,3 @@
+{
+  "source": "async function runReviewedCompany(name,rank=0){const W=eval(load(\"internationalHelpers\"));const result=await eval(load(\"runInternationalSource\"))(name,rank);const card=load(\"internationalCurrent\");const meta=[load(\"atsCurrent\"),load(\"ghCurrent\")].find(m=>m?.url===card.href);if(result!==true&&meta){const c=await W.ev(\"tab_i\",\"({url:location.href,text:document.body.innerText})\");if(c.url.startsWith(card.href.split('?')[0])&&/\\\\nSuccess\\\\n|successfully submitted|application.*received|Thank you for applying|Thanks for applying/i.test(c.text)){await W.record(meta,c);return true;}}return result;}runReviewedCompany"
+}

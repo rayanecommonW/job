@@ -1,0 +1,3 @@
+{
+  "source": "async function meta(tab,apply,key){const C=eval(load(\"ghCoreSource\"));const r=await tools.exec_command({cmd:\"python3 -c \"+C.W.q(\"import json;print(json.dumps(next(i for i in json.load(open('job-search/wttj-volume-queue.json'))['listings'] if i.get('apply_url')==\"+JSON.stringify(apply)+\")))\"),workdir:C.W.ROOT,max_output_tokens:1000});const i=JSON.parse(r.output);const m={id:C.W.ident(i.url),company:i.company,role:i.role,url:i.url,posting:(await C.W.inspect(tab)).text,channel:\"Welcome to the Jungle\",family:\"software\"};store(key,m);await C.W.H.saveJSON(\"job-search/wttj-documents/\"+m.id+\".json\",m);return m}({meta})"
+}
