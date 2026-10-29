@@ -32,6 +32,9 @@ untracked until someone adds it to the allowlist on purpose. Scripts that
 hardcode personal values are listed in `.gitignore` by name. New scripts
 should read identity fields from `profile.yaml` instead, so they can be shared.
 
+Don't add `Co-Authored-By` lines for Claude or any other AI to commit messages
+or PR descriptions.
+
 Run this before any push and expect no output:
 
 ```sh
